@@ -1,36 +1,23 @@
 require('dotenv').config();
 
 let mysql = require('mysql2');
-let connection = mysql.createConnection({
+
+var pool = mysql.createPool({
     host     : process.env.DATABASE_HOST,
     user     : process.env.DATABASE_USER, 
     password : process.env.DATABASE_PASSWORD, 
-    database : process.env.DATABASE_NAME
+    database : process.env.DATABASE_NAME,
+    connectionLimit : 15,
 });
 
+exports.pool = pool;
 
-// function connectToDatabase() {
-//   connection.connect((err => {
-//     if(err) throw err;
-//     console.log('MySQL Connected');
-//   }));
-  
-//   connection.end();
-// }
-
-
-
-exports.databaseConnection = connection;
-
-// var mysql = require('mysql');
-
-// var pool = mysql.createPool({
+// To use a single database connection.
+// let connection = mysql.createConnection({
 //     host     : process.env.DATABASE_HOST,
 //     user     : process.env.DATABASE_USER, 
 //     password : process.env.DATABASE_PASSWORD, 
-//     database : process.env.DATABASE_NAME,
-//     connectionLimit: 10,
-//     supportBigNumbers: true    
+//     database : process.env.DATABASE_NAME
 // });
 
-// exports.pool = pool;
+// exports.databaseConnection = connection;
