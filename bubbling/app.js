@@ -1,8 +1,8 @@
 const menuButton = document.getElementById('top-nav-bar__menu-button');
 const sideNavMenu = document.getElementById('side-nav-menu');
 const closeButton = document.getElementById('side-nav-menu__close-button');
-const servicesMenuItem = document.getElementById('side-nav-menu__sub-menu__products');
-const servicesMenuContent = document.getElementById('side-nav-menu__sub-menu__products-content');
+const servicesMenuItem = document.getElementById('side-nav-menu__sub-menu__dashboard');
+const servicesMenuContent = document.getElementById('side-nav-menu__sub-menu__dashboard-content');
 
 sideNavMenu.addEventListener('click', function (event) {
     sideNavMenu.style.width = '0px';

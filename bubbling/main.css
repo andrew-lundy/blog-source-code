@@ -82,11 +82,11 @@ a {
     right: 25px;
 }
 
-#side-nav-menu__sub-menu__products:hover {
+#side-nav-menu__sub-menu__dashboard:hover {
     cursor: pointer;
 }
 
-#side-nav-menu__sub-menu__products-content {
+#side-nav-menu__sub-menu__dashboard-content {
     display: none;
     position: relative;
     min-width: 160px;
