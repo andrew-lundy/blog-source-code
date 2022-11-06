@@ -13,7 +13,7 @@ const dashboardContent = document.getElementById('dashboard-container__content')
 
 const dashboards = [dashboardOneButton, dashboardTwoButton, dashboardThreeButton];
 
-
+// Event Listeners
 menuButton.addEventListener('click', function(event) {
     sideNavMenu.style.width = '250px';
 });
