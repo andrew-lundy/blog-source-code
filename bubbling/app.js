@@ -16,24 +16,28 @@ const dashboards = [dashboardOneButton, dashboardTwoButton, dashboardThreeButton
 // Event Listeners
 menuButton.addEventListener('click', function(event) {
     sideNavMenu.style.width = '250px';
+    console.log(0);
 });
 
 closeButton.addEventListener('click', function(event) {
     sideNavMenu.style.width = '0px';
+    console.log(1);
 });
 
 sideNavMenu.addEventListener('click', function (event) {
     sideNavMenu.style.width = '0px';
+    console.log(2);
 });
 
 dashboardMenuItem.addEventListener('click', function (event) {
-    event.stopPropagation();
+    // event.stopPropagation();
     if (dashboardMenuContent.style.display === 'flex') {
         dashboardMenuContent.style.display = 'none';
     } else {
         dashboardMenuContent.style.display = 'flex';
         dashboardMenuContent.style.flexDirection = 'column';
     }
+    console.log(3);
 });
 
 function showDashboard(event) {
