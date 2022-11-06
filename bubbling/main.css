@@ -94,3 +94,11 @@ a {
     font-size: 1rem;
     margin-left: 0.5rem;
 }
+
+#dashboard-container__content {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
