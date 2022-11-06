@@ -1,27 +1,28 @@
-const form = document.querySelector('form');
-form.addEventListener('submit', handleFormSubmit);
+const menuButton = document.getElementById('top-nav-bar__menu-button');
+const sideNavMenu = document.getElementById('side-nav-menu');
+const closeButton = document.getElementById('side-nav-menu__close-button');
+const servicesMenuItem = document.getElementById('side-nav-menu__sub-menu__products');
+const servicesMenuContent = document.getElementById('side-nav-menu__sub-menu__products-content');
 
-function handleFormSubmit(event) {
-    event.preventDefault();
-    const todoTitle = document.querySelector('input');
+sideNavMenu.addEventListener('click', function (event) {
+    sideNavMenu.style.width = '0px';
+});
 
-    if (todoTitle.value != '') {
-        addTodo(todoTitle.value);
+menuButton.addEventListener('click', function(event) {
+    sideNavMenu.style.width = '250px';
+});
+
+closeButton.addEventListener('click', function(event) {
+    sideNavMenu.style.width = '0px';
+})
+
+servicesMenuItem.addEventListener('click', function (event) {
+
+    if (servicesMenuContent.style.display === 'flex') {
+        servicesMenuContent.style.display = 'none';
+    } else {
+        servicesMenuContent.style.display = 'flex';
+        servicesMenuContent.style.flexDirection = 'column';
     }
 
-    todoTitle.value = '';
-}
-
-function addTodo(todo) {
-    const todoList = document.querySelector('.todo-list__unordered-items');
-    const newTodo = document.createElement('li');
-    newTodo.innerHTML = `
-        <span>${todo}</span>
-        <span>
-            <button><i class="fa-solid fa-check"></i></button>
-            <button><i class="fa-sharp fa-solid fa-trash"></i></button>
-        </span>
-    `;
-
-    todoList.appendChild(newTodo);
-}
+});

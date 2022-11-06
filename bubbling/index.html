@@ -1,43 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 
-        <title>Vanilla JS To-Do App</title>
-
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+        <title>Bubbling & Capturing</title>
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==' crossorigin='anonymous' referrerpolicy='no-referrer' />
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="main.css">
+        <link rel='stylesheet' href='main.css'>
     </head>
 
-    <body class="container">
-        <div class="header">
-            <h2>Vanilla JS To-Do App</h2>
-        </div>
-        <div class="main">
-            <form>
-                <input type="text" placeholder="New Todo ...">
-                <button type="submit"><i class="fas fa-plus-square fa-xl"></i></button>
-            </form>
+    <body>
+    <div id="side-nav-menu" class="side-nav-menu">
+        <span id="side-nav-menu__close-button">&times;</span>
+        <ul>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <span id="side-nav-menu__sub-menu__products">Saved Dashboards </span>
+            <span id="side-nav-menu__sub-menu__products-content">
+                <a href="#">Dashboard One</a>
+                <a href="#">Dashboard Two</a>
+                <a href="#">Dashboard Three</a>
+            </span>
+        </ul>
 
-            <div class="todo-list">
-                <ul class="todo-list__unordered-items">
-                </ul>
-                <button class="todo-list__clear-button" type="button">Clear All</button>
-            </div>
+    </div>
 
-        </div>
+    <div id="top-nav-bar">
+        <span id="top-nav-bar__menu-button">&#9776;</span>
+    </div>
 
-
-	<script src="app.js"></script>
+	<script src='app.js'></script>
   </body>
 </html>
