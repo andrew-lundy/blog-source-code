@@ -68,7 +68,7 @@ a {
 }
 
 #top-nav-bar__menu-button, #side-nav-menu__close-button {
-    color: #fdffe0;
+    color: #fdffe0 !important;
     font-size: 2rem;
 }
 
