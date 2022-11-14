@@ -3,12 +3,12 @@ const menuButton = document.getElementById('top-nav-bar__menu-button');
 const sideNavMenu = document.getElementById('side-nav-menu');
 const closeButton = document.getElementById('side-nav-menu__close-button');
 const dashboardMenuItem = document.getElementById('side-nav-menu__sub-menu__dashboard');
-const dashboardMenuContent = document.getElementById('side-nav-menu__sub-menu__dashboard-content');
+const dashboardMenuSubItem = document.getElementById('side-nav-menu__sub-menu__dashboard-items');
 
 // Dashboards
-const dashboardOneButton = document.getElementById('side-nav-menu__sub-menu__dashboard-content__dashboard-one');
-const dashboardTwoButton = document.getElementById('side-nav-menu__sub-menu__dashboard-content__dashboard-two');
-const dashboardThreeButton = document.getElementById('side-nav-menu__sub-menu__dashboard-content__dashboard-three');
+const dashboardOneButton = document.getElementById('side-nav-menu__sub-menu__dashboard-items__dashboard-one');
+const dashboardTwoButton = document.getElementById('side-nav-menu__sub-menu__dashboard-items__dashboard-two');
+const dashboardThreeButton = document.getElementById('side-nav-menu__sub-menu__dashboard-items__dashboard-three');
 const dashboardContent = document.getElementById('dashboard-container__content');
 
 const dashboards = [dashboardOneButton, dashboardTwoButton, dashboardThreeButton];
@@ -31,15 +31,17 @@ sideNavMenu.addEventListener('click', function (event) {
 
 dashboardMenuItem.addEventListener('click', function (event) {
     // event.stopPropagation();
-    if (dashboardMenuContent.style.display === 'flex') {
-        dashboardMenuContent.style.display = 'none';
+
+    if (dashboardMenuSubItem.style.display === 'flex') {
+        dashboardMenuSubItem.style.display = 'none';
     } else {
-        dashboardMenuContent.style.display = 'flex';
-        dashboardMenuContent.style.flexDirection = 'column';
+        dashboardMenuSubItem.style.display = 'flex';
+        dashboardMenuSubItem.style.flexDirection = 'column';
     }
     console.log(3);
 });
 
+// Dashboard rendering
 function showDashboard(event) {
     const html = event.target.innerHTML;
 
